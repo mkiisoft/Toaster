@@ -3,10 +3,21 @@
 =================
 Toaster it's a super simple Toast but with a listener to know when the message on screen is gone.
 
-# Install
+# Install and Usage
 
 ## Android Studio:
 
--Put toaster.aar over "libs" folder.
--File > New > New Module > Import .JAR/.AAR Package
--Select toaster.aar from the "libs" folder and press Finish.
+- Put toaster.aar over "libs" folder.
+- File > New > New Module > Import .JAR/.AAR Package
+- Select toaster.aar from the "libs" folder and press Finish.
+
+## How to use:
+
+``` 
+Toaster.getInstance().makeText(context, "your custom message", Toast.LENGTH_SHORT, new OnToasterFinish() {
+                @Override
+                public void finish() {
+                    // Your code over here after the Toast
+                }
+            });
+```
